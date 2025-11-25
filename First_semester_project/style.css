@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Font */
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+/* Texty */
+.nadpis{
+    font-size: 28px; 
+    letter-spacing: 3px;
+}
+
+.classic-text{
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    font-size: 14px;
+}
+
+/* Hero */
+.main-hero {
+  padding: 6rem 0;
+  font-weight: 600;
+}
+.hero-text {
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.hero-image {
+  width: 100%;
+  height: 300px;
+  background-image: url('img/keyboard.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+
+/* Navbar */
+.site-header .navbar {
+  padding: 1rem 0;
+  background: #f8f9fa;
+}
+.navbar-brand {
+  font-weight: 700;
+  padding-left: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.navbar-nav .nav-link {
+  padding: 0 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #111;
+}
+.navbar-nav .nav-link:hover {
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+.navbar-toggler {
+  margin-right: 2rem;
+}
+
+/* Parallax */
+.parallax {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/* Contact form */
+.contact-form .custom-input {
+    border: none;
+    border-bottom: 2px solid #000;
+    border-radius: 0;
+    padding: 10px 5px;
+    background: transparent;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-form .custom-input:focus {
+    border-bottom: 2px solid #555;
+    box-shadow: none;
+}
+
+.contact-form label {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+/* FadeIn */
+body {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
