@@ -8,6 +8,31 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "dfTeM34APdhHA5Prk",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        frm = document.getElementById('contact-form');
+        frm.addEventListener('submit', function (event) {
+          event.preventDefault();
+          // these IDs from the previous steps
+          emailjs.sendForm('service_glzzihl', 'template_2v1gamc', frm, this)
+            .then(() => {
+              console.log('SUCCESS!');
+              frm.reset()
+            }, (error) => {
+              console.log('FAILED...', error);
+            });
+        });
+      }
+    </script>
   </head>
 
   <body>
